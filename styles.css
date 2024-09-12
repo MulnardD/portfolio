@@ -1,0 +1,302 @@
+@font-face {
+    font-family: 'Mangiola';
+    src: url('fonts/Mangiola-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mondapick';
+    src: url('fonts/Mondapick.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SabonB';
+    src: url('fonts/SabonBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SabonI';
+    src: url('fonts/SabonItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SabonBI';
+    src: url('fonts/SabonBoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.6);
+    border-bottom: 0px solid #ddd;
+}
+
+/* Header content styling */
+.header-content {
+    position: absolute; /* Positionne l'élément par rapport à son parent */
+    top: 20px; /* Aligne en haut */
+    left: 0; /* Aligne à gauche */
+    z-index: 2;
+    width: 95%;
+    height: auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+    border-radius: 0px;
+    margin: 20px;
+}
+
+.header-content h1 {
+    font-size: 50px;
+    margin: 0;
+    font-family: 'SabonBold', sans-serif; 
+    color: #fff;
+    font-weight: 700;
+
+}
+
+.header-content p {
+    font-size: 24px;
+    margin: 20px;
+    color: #f9f5d8;
+
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.slide-caption h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.slide-caption p {
+    font-size: 1.5em;
+}
+
+.nav-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.dot.active {
+    opacity: 1;
+}
+
+.instagram-link {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.instagram-link:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Project Section */
+.content-section {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+
+}
+
+.text-content {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.text-content h2 {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #f9f5d8;
+    font-family: 'SabonBold', sans-serif; 
+    color: #000;
+    font-weight: 700;
+}
+
+.text-content p {
+    font-size: 16px;
+    color: #000;
+}
+
+.gallery-container {
+    flex: 1;
+    position: relative;
+    max-width: 600px;
+}
+
+.gallery-slides {
+    display: none;
+}
+
+.gallery-slides img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.gallery-slides .caption {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Navigation buttons for gallery */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Show the first slide by default */
+.gallery-container .gallery-slides:first-child {
+    display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .text-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.articles-buttons {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.article-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.article-button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+.article-button:active {
+    background-color: #222;
+    transform: translateY(1px);
+}
+
